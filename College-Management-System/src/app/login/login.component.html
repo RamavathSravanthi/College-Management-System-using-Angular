@@ -1,0 +1,48 @@
+<html>
+    
+<body>
+    <div class="container">
+
+    <form (ngSubmit)="OnSubmit()">
+        <div>
+     <table class="container">
+        <tr>
+          <td>
+                <img src="../../assets/img/adminloginimg2.jpg">
+        </td> 
+        </tr>
+        
+    <tr>
+    <td>
+    <label for="un">UserName : </label>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <input type="text" id="un" name="un" placeholder="UserName" required [(ngModel)]="userName" /><br>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label for="pw">PassWord  : </label>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <input type="password" id="pw" name="pw" placeholder="PassWord" required [(ngModel)]="password" /><br>
+   <span  class="text-danger"*ngIf="submit==false">
+        <p>UserName or Password is NotValid</p>
+   </span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <button type="submit" class="btn btn-primary" value="Login">Login</button>
+    </td>
+    </tr>
+    </table>
+    </div>
+    </form>
+    </div>
+    </body>
+    </html>

@@ -1,0 +1,50 @@
+body {
+    background-image: url('../../assets/img/loginoption.jpg');
+    background-size: cover;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 600px;
+    background-size: cover;
+    color: #fff;
+    font-size: 35px;
+}
+
+.login {
+    margin-left: 25%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background-color: black;
+    color: white;
+}
+
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 16px;
+    color: white;
+}
+
+footer
+{
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height: 40px;
+    background-color:black;
+    text-align: center;
+    color:white;
+    font-size: 20px;
+}
+
+button {
+    background-color:  rgb(236, 12, 98);
+    color: white;
+    font-size: 25px;
+}

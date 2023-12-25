@@ -1,0 +1,66 @@
+<body>
+    <div class="content">
+      <header>
+        <mat-toolbar color="primary" class="navbar">
+          <span class="navbar-brand"><mat-icon>school</mat-icon>   College Management System</span>
+  
+          <div class="spacer"></div>
+  
+          <button color="accent" class="homebutton" routerLink="/studentportal" routerLinkActive="active">Back to home</button>
+        </mat-toolbar>
+      </header>
+  
+  
+  <div class="container" >
+  <h2 id="a">Faculty List</h2>
+  
+  <!-- /*search data*/ -->
+  <div class="input-group w-25 mt-5">
+    <input class="form-control" type="text" [(ngModel)]="facultysearch">
+    <button class="btn btn-primary" (click)="filterdata()">Serach</button>
+  </div>
+  
+  
+  <div>
+  
+  </div>
+  
+  
+  <table class="table table-striped ">
+    
+      <thead>
+          <tr>
+              <th>FirstName</th>
+              <th>LaststName</th>
+              <th>Email</th>        
+              <th>Subject</th>
+              <th>Phone_No</th>
+              <th>Qualification</th>
+                </tr>
+  
+               
+      </thead>
+      <tbody>
+          <tr *ngFor="let f of facultys |  paginate: { itemsPerPage: count, currentPage: p}">
+              <td>{{f.firstName}}</td>
+              <td>{{f.lastName}}</td>
+              <td>{{f.email}}</td>
+              <td>{{f.subject}}</td>
+              <td>{{f.phone_No}}</td>
+              <td>{{f.qualificaton}}</td>
+          </tr>
+      </tbody>
+  </table>
+  <div class="mt-8 py-5 flex justify-center items-center">
+    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+  </div>
+  </div>
+  
+  <footer>
+      <p><small>copyright$2023</small> OurCollege. All rights reserved.</p>
+    </footer>
+  </div>
+  
+  </body>
+      
+  
